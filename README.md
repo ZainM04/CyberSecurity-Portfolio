@@ -9,11 +9,6 @@ log analysis, network forensics, SIEM, and incident response.
 
 ---
 
-## Labs Completed
-- Day 1 - TryHackMe Linux Fundamentals Part 1
-
----
-
 ## Tools Used
 - TryHackMe
 - WSL

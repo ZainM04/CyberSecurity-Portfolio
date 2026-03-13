@@ -1,48 +1,74 @@
-##Day 1 (Morning Block) - Linux Fundamentals Part 1 
-Linux Commands:
+# Day 1 - Linux Fundamentals Part 1
 
-Echo - Outputs any text that we provide (Echo "Hello")
-You would use the echo command for debugging 
-It is also useful for sending things between commands 
-If you don't have spaces in your text you don't need to include quotations
+## Commands
 
-whoami - Find out what user we are logged in as 
+### echo
+Outputs any text that we provide.
+`echo "Hello"`
+- Useful for debugging
+- Useful for sending output between commands
+- Quotes not needed if there are no spaces in your text
 
-ls - listing, lists the files in the current directory
-you can list the contents of a directory without having to navigate to it by using ls and the name of the directory 
- 
-cd - used to change or jump between directories 
-to go back a directory use the command (cd ..) 
+### whoami
+Finds out what user we are currently logged in as.
+`whoami`
 
-cat - concatenate, outputs the content of the file 
- 
-pwd - prints working directory 
-This command is used to find the full file path of the working directory 
+### ls
+Lists the files in the current directory.
+`ls`
+`ls directoryname` - list contents of a directory without navigating to it
 
-find - Will find a file in the directory you are in 
-If you know the file name you would use a command like (find -name file.txt) 
-You can use a wildcard (*), this allows you to search for anything that ends in what you specify. (find -name *.txt)
+### cd
+Used to change or jump between directories.
+`cd directoryname`
+`cd ..` - go back one directory
 
-grep - allows us to search the content of files for specific values what we are looking for 
-An example of a grep command is (grep "Search" file.txt)
+### cat
+Concatenate - outputs the content of a file.
+`cat filename`
+`cat -n filename` - displays content with line numbers
 
+### pwd
+Prints working directory - shows the full file path of where you currently are.
+`pwd`
 
-Linux Operators: 
-& - Allows you to run commands in the background of your terminal 
-Known as the background operator
+### find
+Finds a file in the directory you are in.
+`find -name file.txt` - find a specific file by name
+`find -name *.txt` - wildcard search, finds anything ending in .txt
 
-&& - Allows you to combine multiple commands together in one line of your terminal 
-The second command will only run if the first command is successful 
+### grep
+Searches the content of files for a specific value.
+`grep "search term" file.txt`
+`grep -i "search term" file.txt` - case insensitive search
+`grep -r "search term" /var/log/` - search recursively through folders
+`grep -n "search term" file.txt` - shows line numbers with results
 
-> - It is a redirector, means we can take the output from one command and direct is somewhere else 
-(echo hello > welcome) this command would print hello and make a file called welcome to print "hello" to 
-If the file exists the redirector will over write the content of the file 
-If the file doesn't exist the redirector will make the file 
+---
 
->> - This operator is the same as the redirector, but appends the output rather then replace it 
-This is an known as the appending operator. This is also a redirect operator 
-Instead of rewriting a file, this operator just puts the output at the end 
+## Operators
 
+### & (Background Operator)
+Runs a command in the background of your terminal.
+`command &`
 
-Tip: 
-CTRL + L, this clears the terminal 
+### && (AND Operator)
+Combines multiple commands in one line. The second command only runs if the first is successful.
+`command1 && command2`
+
+### > (Redirect Operator)
+Takes the output of a command and directs it somewhere else. Overwrites existing content.
+`echo hello > welcome` - creates a file called welcome containing "hello"
+- Creates the file if it doesn't exist
+- Overwrites the file if it does exist
+
+### >> (Append Operator)
+Same as the redirect operator but appends output to the end of a file instead of overwriting it.
+`echo hello >> welcome`
+- Creates the file if it doesn't exist
+- Adds to the end of the file if it does exist
+
+---
+
+## Tips
+- `CTRL + L` - clears the terminal

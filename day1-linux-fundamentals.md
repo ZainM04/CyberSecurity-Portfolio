@@ -1,4 +1,4 @@
-# Day 1 - Linux Fundamentals Part 1
+# Day 1 - Linux Fundamentals Part 1 & 2
 
 ## Commands
 

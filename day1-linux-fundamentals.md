@@ -68,6 +68,104 @@ Same as the redirect operator but appends output to the end of a file instead of
 - Creates the file if it doesn't exist
 - Adds to the end of the file if it does exist
 
+
+## Secure Shell (SSH)
+SSH is a protocol used to connect to and interact with the command line of a remote Linux machine. Communication is encrypted.
+
+`ssh username@IP_address`
+
+---
+
+## Flags & Switches
+Most commands allow additional arguments identified by a hyphen followed by a keyword, known as a flag or switch.
+
+`ls -a` - shows hidden files and folders
+
+### Getting Help
+`command --help` - lists possible options and brief descriptions for a command
+`man ls` - opens the manual page for the ls command
+- Press `q` to exit the manual page
+
+---
+
+## Commands
+
+### touch
+Creates a new empty file.
+`touch filename`
+- Only takes one argument — the file name
+- Use `echo` or `nano` to add content to the file after creating it
+
+### mkdir
+Creates a new directory or folder.
+`mkdir foldername`
+- Only takes one argument — the directory name
+
+### cp
+Copies a file or folder and its entire contents.
+`cp sourcefile destinationfile`
+- Takes two arguments — the file to copy and the name to assign the copied file
+
+### mv
+Moves or renames a file or folder.
+`mv filename destination`
+- Takes two arguments — the file name and the destination
+- To rename: use the new name as the second argument instead of a destination path
+
+### rm
+Removes a file or folder.
+`rm filename`
+`rm -R foldername` - removes a folder and everything inside it
+- Be careful — there is no recycle bin in Linux, deletion is permanent
+
+### file
+Determines the type of a file.
+`file filename`
+- Takes one argument — the file name
+
+### cat (additional note)
+Can be used to view the contents of a file.
+`cat filename`
+
+---
+
+## File Permissions
+Every file and folder has permissions that determine who can read, write, or execute it.
+
+`-rwxrwxrwx`
+
+| Section | Meaning |
+|---------|---------|
+| First bit | `-` for file, `d` for directory |
+| First `rwx` | Permissions for the file owner |
+| Second `rwx` | Permissions for users in the same group |
+| Third `rwx` | Permissions for every other user on the system |
+
+### Permission types
+- `r` - read
+- `w` - write
+- `x` - execute
+
+---
+
+## Switching Users
+
+### su (Substitute User)
+Switches to another user account.
+`su username`
+`su -l username` - simulates a full login as that user, inheriting their environment variables and properties
+
+---
+
+## Common Directories
+
+| Directory | Purpose |
+|-----------|---------|
+| `/etc` | Stores system configuration files used by the operating system |
+| `/var` | Stores data frequently accessed or written by running services and applications |
+| `/root` | Home directory for the root user |
+| `/tmp` | Temporary directory — volatile, cleared on restart. Used for data only needed once or twice |
+
 ---
 
 ## Tips
